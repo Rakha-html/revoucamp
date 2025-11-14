@@ -1,18 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
+    <title>Todo List revou</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <header>
-        <h1>assalamualaikum</h1>
-    </header>
+    <h2>Jadwal kegiatan</h2>
+    <div class="input-group">
+        <input type="text" id="taskInput" placeholder="Kegiatan">
+        <input type="date" id="dateInput">
+        <button id="addBtn">Add</button>
+        <button id="deleteAllBtn">Delete Semua</button>
+    </div>
+
+    <div class="filter-group">
+        <button onclick="filterTasks('semua')">Semua</button>
+        <button onclick="filterTasks('hari-ini')">Hari Ini</button>
+        <button onclick="filterTasks('minggu-ini')">Minggu Ini</button>
+        <button onclick="filterTasks('bulan-ini')">Bulan ini</button>
+    </div>
+    <hr>
+
+    <ul id="taskList"></ul>
+    <hr>
+    <footer>Made by Nadirat Rakha</footer>
 
     <script src="script.js"></script>
 </body>
